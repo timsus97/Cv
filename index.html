@@ -5,96 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; }
-        .container { max-width: 800px; margin: auto; }
-        h1, h2, h3 { color: #333; }
-        .skills, .education { margin-bottom: 20px; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin-bottom: 10px; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        ul ul {
+            list-style-type: circle;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .education, .skills {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>My Resume</h1>
-        <p>Experienced web developer and network engineer with a successful 7-year track record. I specialize in building websites, software solutions of any complexity, CRM systems, and even blockchain applications. Proficient in various CMS platforms, frameworks, and security tools, including intrusion detection/prevention systems. Possess CCNA-level networking skills. Skilled in implementing automation solutions to streamline processes and enhance efficiency. Proficient in a wide range of advanced programming languages, frameworks, and scripts. Experienced in leading design and development teams, conducting online webinars and consultations. Worked internationally and freelanced for foreign companies. I have a strong interest in innovative and unconventional projects, and I excel at identifying and meeting customer needs.</p>
-        
-        <h2>Education</h2>
-        <div class="education">
-            <p>Bachelor's Degree in Computer Science, SEGI University (incomplete)</p>
-            <p>Years of Study: 2015-2018</p>
+        <div class="section">
+            <h2>Profile</h2>
+            <p>Experienced web developer and network engineer with a successful 7-year track record. I specialize in building websites, software solutions of any complexity, CRM systems, and even blockchain applications. Proficient in various CMS platforms, frameworks, and security tools, including intrusion detection/prevention systems. Possess CCNA-level networking skills. Skilled in implementing automation solutions to streamline processes and enhance efficiency. Proficient in a wide range of advanced programming languages, frameworks, and scripts. Experienced in leading design and development teams, conducting online webinars and consultations. Worked internationally and freelanced for foreign companies. I have a strong interest in innovative and unconventional projects, and I excel at identifying and meeting customer needs.</p>
         </div>
         
-        <h2>Skills</h2>
-        <div class="skills">
-            <h3>Frontend Development</h3>
-            <ul>
-                <li>Vue.js</li>
-                <li>Angular</li>
-                <li>Bootstrap</li>
-                <li>SASS</li>
-            </ul>
-            <h3>Backend Development</h3>
-            <ul>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>Django</li>
-                <li>Flask</li>
-                <li>Laravel</li>
-            </ul>
-            <h3>CMS</h3>
-            <ul>
-                <li>WordPress</li>
-                <li>Joomla</li>
-                <li>Drupal</li>
-                <li>October CMS</li>
-                <li>Magento</li>
-                <li>Shopify</li>
-                <li>PrestaShop</li>
-                <li>TYPO3</li>
-                <li>MODX</li>
-                <li>Umbraco</li>
-            </ul>
-            <h3>Mobile Development</h3>
-            <ul>
-                <li>Flutter</li>
-                <li>Android SDK</li>
-                <li>iOS SDK</li>
-            </ul>
-            <h3>Testing and Debugging</h3>
-            <ul>
-                <li>JUnit</li>
-                <li>Selenium</li>
-                <li>Postman</li>
-            </ul>
-            <h3>Containerization and Orchestration</h3>
-            <ul>
-                <li>Docker</li>
-                <li>Kubernetes</li>
-            </ul>
-            <h3>Artificial Intelligence and Machine Learning</h3>
-            <ul>
-                <li>TensorFlow</li>
-                <li>scikit-learn</li>
-                <li>PyTorch</li>
-            </ul>
-            <h3>Security</h3>
-            <ul>
-                <li>OWASP Top 10</li>
-                <li>Network Security</li>
-                <li>Information Protection</li>
-                <li>Cryptography</li>
-                <li>Security Audits</li>
-                <li>Vulnerability Management</li>
-                <li>DDoS Protection</li>
-                <li>GDPR and Regulatory Compliance</li>
-                <li>User Security Training</li>
-            </ul>
-            <h3>Project Management</h3>
-            <ul>
-                <li>Jira</li>
-                <li>Trello</li>
-                <li>Asana</li>
-            </ul>
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education">
+                <p><strong>Bachelor's Degree in Computer Science, SEGI University (incomplete)</strong></p>
+                <p>Years of Study: 2015-2018</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <h3>Frontend Development</h3>
+                <ul>
+                    <li>Vue.js</li>
+                    <li>Angular</li>
+                    <li>Bootstrap</li>
+                    <li>SASS</li>
+                </ul>
+                <h3>Backend Development</h3>
+                <ul>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>Django</li>
+                    <li>Flask</li>
+                    <li>Laravel</li>
+                </ul>
+                <h3>CMS</h3>
+                <ul>
+                    <li>WordPress</li>
+                    <li>Joomla</li>
+                    <li>Drupal</li>
+                    <li>October CMS</li>
+                    <li>Magento</li>
+                    <li>Shopify</li>
+                    <li>PrestaShop</li>
+                    <li>TYPO3</li>
+                    <li>MODX</li>
+                    <li>Umbraco</li>
+                </ul>
+                <h3>Mobile Development</h3>
+                <ul>
+                    <li>Flutter</li>
+                    <li>Android SDK</li>
+                    <li>iOS SDK</li>
+                </ul>
+                <h3>Testing and Debugging</h3>
+                <ul>
+                    <li>JUnit</li>
+                    <li>Selenium</li>
+                    <li>Postman</li>
+                </ul>
+                <h3>Containerization and Orchestration</h3>
+                <ul>
+                    <li>Docker</li>
+                    <li>Kubernetes</li>
+                </ul>
+                <h3>Artificial Intelligence and Machine Learning</h3>
+                <ul>
+                    <li>TensorFlow</li>
+                    <li>scikit-learn</li>
+                    <li>PyTorch</li>
+                </ul>
+                <h3>Security</h3>
+                <ul>
+                    <li>OWASP Top 10</li>
+                    <li>Network Security</li>
+                    <li>Information Protection</li>
+                    <li>Cryptography</li>
+                    <li>Security Audits</li>
+                    <li>Vulnerability Management</li>
+                    <li>DDoS Protection</li>
+                    <li>GDPR and Regulatory Compliance</li>
+                    <li>User Security Training</li>
+                </ul>
+                <h3>Project Management</h3>
+                <ul>
+                    <li>Jira</li>
+                    <li>Trello</li>
+                    <li>Asana</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
