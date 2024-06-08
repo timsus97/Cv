@@ -88,7 +88,6 @@
             left: 0;
             z-index: 0;
             pointer-events: none;
-            overflow: hidden;
         }
         .star {
             position: absolute;
@@ -209,4 +208,8 @@
             <a href="https://t.me/your_telegram_username" target="_blank"><i class="fab fa-telegram"></i></a>
             <a href="mailto:your_email@example.com"><i class="fas fa-envelope"></i></a>
         </div>
-    </div
+    </div>
+    <script>
+        function toggleSkills(skillId) {
+            const skillElement = document.getElementById(skillId);
+            const iconElement =
