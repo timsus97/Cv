@@ -4,8 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            position: relative;
+            z-index: 1;
+        }
+        h1, h2, h3 {
+            color: #fff;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h2 {
+            border-bottom: 2px solid #fff;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+            display: none;
+        }
+        ul ul {
+            list-style-type: none;
+        }
+        ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            margin-right: 8px;
+            color: #fff;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .education, .skills {
+            margin-bottom: 20px;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .contact a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+        .stars {
+            width: 200%;
+            height: 200%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: blink 2s infinite ease-in-out;
+        }
+        @keyframes blink {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="stars"></div>
@@ -31,7 +128,6 @@
                 <ul id="frontend">
                     <li>Vue.js</li>
                     <li>Angular</li>
-                    <li>React</li>
                     <li>Bootstrap</li>
                     <li>SASS</li>
                 </ul>
@@ -107,6 +203,31 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function toggleSkills(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+
+        // Create stars
+        function createStars() {
+            const starsContainer = document.querySelector('.stars');
+            for (let i = 0; i < 100; i++) {
+                let star = document.createElement('div');
+                star.className = 'star';
+                star.style.top = Math.random() * window.innerHeight + 'px';
+                star.style.left = Math.random() * window.innerWidth + 'px';
+                star.style.animationDuration = Math.random() * 2 + 1 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', createStars);
+    </script>
 </body>
-</html>
+</html> 
+                    
