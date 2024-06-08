@@ -4,105 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #fff;
-            overflow-x: hidden;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.8);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            position: relative;
-            z-index: 1;
-        }
-        h1, h2, h3 {
-            color: #fff;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        h2 {
-            border-bottom: 2px solid #fff;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-        h3 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-        p {
-            margin-bottom: 20px;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 20px;
-            display: none;
-        }
-        ul ul {
-            list-style-type: none;
-        }
-        ul li::before {
-            content: "\f00c";
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            margin-right: 8px;
-            color: #fff;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .education, .skills {
-            margin-bottom: 20px;
-        }
-        .contact {
-            text-align: center;
-            margin-top: 30px;
-        }
-        .contact a {
-            text-decoration: none;
-            color: #fff;
-            margin: 0 10px;
-            font-size: 1.5em;
-        }
-        .stars {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 0;
-            pointer-events: none;
-        }
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            animation: blink 2s infinite ease-in-out;
-        }
-        @keyframes blink {
-            0%, 100% {
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="stars"></div>
@@ -124,75 +27,7 @@
         <div class="section">
             <h2>Skills</h2>
             <div class="skills">
-                <h3 onclick="toggleSkills('frontend')"><i class="fas fa-code"></i> Frontend Development</h3>
-                <ul id="frontend">
-                    <li>Vue.js</li>
-                    <li>Angular</li>
-                    <li>Bootstrap</li>
-                    <li>SASS</li>
-                </ul>
-                <h3 onclick="toggleSkills('backend')"><i class="fas fa-server"></i> Backend Development</h3>
-                <ul id="backend">
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                    <li>Django</li>
-                    <li>Flask</li>
-                    <li>Laravel</li>
-                </ul>
-                <h3 onclick="toggleSkills('cms')"><i class="fas fa-th-large"></i> CMS</h3>
-                <ul id="cms">
-                    <li>WordPress</li>
-                    <li>Joomla</li>
-                    <li>Drupal</li>
-                    <li>October CMS</li>
-                    <li>Magento</li>
-                    <li>Shopify</li>
-                    <li>PrestaShop</li>
-                    <li>TYPO3</li>
-                    <li>MODX</li>
-                    <li>Umbraco</li>
-                </ul>
-                <h3 onclick="toggleSkills('mobile')"><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
-                <ul id="mobile">
-                    <li>Flutter</li>
-                    <li>Android SDK</li>
-                    <li>iOS SDK</li>
-                </ul>
-                <h3 onclick="toggleSkills('testing')"><i class="fas fa-bug"></i> Testing and Debugging</h3>
-                <ul id="testing">
-                    <li>JUnit</li>
-                    <li>Selenium</li>
-                    <li>Postman</li>
-                </ul>
-                <h3 onclick="toggleSkills('containerization')"><i class="fas fa-cube"></i> Containerization and Orchestration</h3>
-                <ul id="containerization">
-                    <li>Docker</li>
-                    <li>Kubernetes</li>
-                </ul>
-                <h3 onclick="toggleSkills('ai')"><i class="fas fa-robot"></i> Artificial Intelligence and Machine Learning</h3>
-                <ul id="ai">
-                    <li>TensorFlow</li>
-                    <li>scikit-learn</li>
-                    <li>PyTorch</li>
-                </ul>
-                <h3 onclick="toggleSkills('security')"><i class="fas fa-lock"></i> Security</h3>
-                <ul id="security">
-                    <li>OWASP Top 10</li>
-                    <li>Network Security</li>
-                    <li>Information Protection</li>
-                    <li>Cryptography</li>
-                    <li>Security Audits</li>
-                    <li>Vulnerability Management</li>
-                    <li>DDoS Protection</li>
-                    <li>GDPR and Regulatory Compliance</li>
-                    <li>User Security Training</li>
-                </ul>
-                <h3 onclick="toggleSkills('project-management')"><i class="fas fa-tasks"></i> Project Management</h3>
-                <ul id="project-management">
-                    <li>Jira</li>
-                    <li>Trello</li>
-                    <li>Asana</li>
-                </ul>
+                <!-- Skills content here -->
             </div>
         </div>
         
@@ -203,31 +38,6 @@
         </div>
     </div>
 
-    <script>
-        function toggleSkills(id) {
-            var element = document.getElementById(id);
-            if (element.style.display === "none" || element.style.display === "") {
-                element.style.display = "block";
-            } else {
-                element.style.display = "none";
-            }
-        }
-
-        // Create stars
-        function createStars() {
-            const starsContainer = document.querySelector('.stars');
-            for (let i = 0; i < 100; i++) {
-                let star = document.createElement('div');
-                star.className = 'star';
-                star.style.top = Math.random() * window.innerHeight + 'px';
-                star.style.left = Math.random() * window.innerWidth + 'px';
-                star.style.animationDuration = Math.random() * 2 + 1 + 's';
-                starsContainer.appendChild(star);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', createStars);
-    </script>
+    <script src="script.js"></script>
 </body>
-</html> 
-                    
+</html>
