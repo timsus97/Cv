@@ -42,6 +42,9 @@
             margin-top: 20px;
             margin-bottom: 10px;
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
         p {
             margin-bottom: 20px;
@@ -102,6 +105,10 @@
                 opacity: 1;
             }
         }
+        .toggle-icon {
+            font-size: 1em;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -124,14 +131,14 @@
         <div class="section">
             <h2>Skills</h2>
             <div class="skills">
-                <h3 onclick="toggleSkills('frontend')"><i class="fas fa-code"></i> Frontend Development</h3>
+                <h3 onclick="toggleSkills('frontend')"><i class="fas fa-code"></i> Frontend Development <i id="frontend-icon" class="fas fa-chevron-down toggle-icon"></i></h3>
                 <ul id="frontend">
                     <li>Vue.js</li>
                     <li>Angular</li>
                     <li>Bootstrap</li>
                     <li>SASS</li>
                 </ul>
-                <h3 onclick="toggleSkills('backend')"><i class="fas fa-server"></i> Backend Development</h3>
+                <h3 onclick="toggleSkills('backend')"><i class="fas fa-server"></i> Backend Development <i id="backend-icon" class="fas fa-chevron-down toggle-icon"></i></h3>
                 <ul id="backend">
                     <li>Node.js</li>
                     <li>Express.js</li>
@@ -139,7 +146,7 @@
                     <li>Flask</li>
                     <li>Laravel</li>
                 </ul>
-                <h3 onclick="toggleSkills('cms')"><i class="fas fa-th-large"></i> CMS</h3>
+                <h3 onclick="toggleSkills('cms')"><i class="fas fa-th-large"></i> CMS <i id="cms-icon" class="fas fa-chevron-down toggle-icon"></i></h3>
                 <ul id="cms">
                     <li>WordPress</li>
                     <li>Joomla</li>
@@ -152,30 +159,30 @@
                     <li>MODX</li>
                     <li>Umbraco</li>
                 </ul>
-                <h3 onclick="toggleSkills('mobile')"><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+                <h3 onclick="toggleSkills('mobile')"><i class="fas fa-mobile-alt"></i> Mobile Development <i id="mobile-icon" class="fas fa-chevron-down toggle-icon"></i></h3>
                 <ul id="mobile">
                     <li>Flutter</li>
                     <li>Android SDK</li>
                     <li>iOS SDK</li>
                 </ul>
-                <h3 onclick="toggleSkills('testing')"><i class="fas fa-bug"></i> Testing and Debugging</h3>
+                <h3 onclick="toggleSkills('testing')"><i class="fas fa-bug"></i> Testing and Debugging <i id="testing-icon" class="fas fa-chevron-down toggle-icon"></i></h3>
                 <ul id="testing">
                     <li>JUnit</li>
                     <li>Selenium</li>
                     <li>Postman</li>
                 </ul>
-                <h3 onclick="toggleSkills('containerization')"><i class="fas fa-cube"></i> Containerization and Orchestration</h3>
+                <h3 onclick="toggleSkills('containerization')"><i class="fas fa-cube"></i> Containerization and Orchestration <i id="containerization-icon" class="fas fa-chevron-down toggle-icon"></i></h3>
                 <ul id="containerization">
                     <li>Docker</li>
                     <li>Kubernetes</li>
                 </ul>
-                <h3 onclick="toggleSkills('ai')"><i class="fas fa-robot"></i> Artificial Intelligence and Machine Learning</h3>
+                <h3 onclick="toggleSkills('ai')"><i class="fas fa-robot"></i> Artificial Intelligence and Machine Learning <i id="ai-icon" class="fas fa-chevron-down toggle-icon"></i></h3>
                 <ul id="ai">
                     <li>TensorFlow</li>
                     <li>scikit-learn</li>
                     <li>PyTorch</li>
                 </ul>
-                <h3 onclick="toggleSkills('security')"><i class="fas fa-lock"></i> Security</h3>
+                <h3 onclick="toggleSkills('security')"><i class="fas fa-lock"></i> Security <i id="security-icon" class="fas fa-chevron-down toggle-icon"></i></h3>
                 <ul id="security">
                     <li>OWASP Top 10</li>
                     <li>Network Security</li>
@@ -187,7 +194,7 @@
                     <li>GDPR and Regulatory Compliance</li>
                     <li>User Security Training</li>
                 </ul>
-                <h3 onclick="toggleSkills('project-management')"><i class="fas fa-tasks"></i> Project Management</h3>
+                <h3 onclick="toggleSkills('project-management')"><i class="fas fa-tasks"></i> Project Management <i id="project-management-icon" class="fas fa-chevron-down toggle-icon"></i></h3>
                 <ul id="project-management">
                     <li>Jira</li>
                     <li>Trello</li>
@@ -201,32 +208,3 @@
             <a href="https://t.me/your_telegram_username" target="_blank"><i class="fab fa-telegram"></i></a>
             <a href="mailto:your_email@example.com"><i class="fas fa-envelope"></i></a>
         </div>
-    </div>
-
-    <script>
-        function toggleSkills(id) {
-            var element = document.getElementById(id);
-            if (element.style.display === "none" || element.style.display === "") {
-                element.style.display = "block";
-            } else {
-                element.style.display = "none";
-            }
-        }
-
-        // Create stars
-        function createStars() {
-            const starsContainer = document.querySelector('.stars');
-            for (let i = 0; i < 100; i++) {
-                let star = document.createElement('div');
-                star.className = 'star';
-                star.style.top = Math.random() * window.innerHeight + 'px';
-                star.style.left = Math.random() * window.innerWidth + 'px';
-                star.style.animationDuration = Math.random() * 2 + 1 + 's';
-                starsContainer.appendChild(star);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', createStars);
-    </script>
-</body>
-</html>
